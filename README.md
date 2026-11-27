@@ -2,7 +2,7 @@
 
 ### Sana uygun yeri keşfet.
 
-YerBulGo, kullanıcıların konumlarına, bütçelerine ve tercihlerine uygun işletmeleri keşfetmelerini amaçlayan harita tabanlı bir web uygulamasıdır. Mekân keşfini, işletme bilgilerini ve kampanyaları tek bir platformda bir araya getirir.
+Önersene, kullanıcıların konumlarına, bütçelerine ve tercihlerine uygun işletmeleri keşfetmelerini amaçlayan harita tabanlı bir web uygulamasıdır. Mekân keşfini, işletme bilgilerini ve kampanyaları tek bir platformda bir araya getirir.
 
 Projenin odağında iki kullanıcı grubu bulunur: yeni yerler keşfetmek isteyen kullanıcılar ve dijital görünürlüğünü artırarak müşterilerine ulaşmak isteyen işletmeler.
 
@@ -10,7 +10,7 @@ Projenin odağında iki kullanıcı grubu bulunur: yeni yerler keşfetmek isteye
 
 ## Projenin Amacı
 
-Bir yer seçerken konum, fiyat, kategori ve kişisel tercihler birlikte değerlendirilir. YerBulGo, bu bilgileri aynı deneyimde buluşturarak kullanıcıların kendilerine uygun seçeneklere ulaşmasını kolaylaştırmayı hedefler.
+Bir yer seçerken konum, fiyat, kategori ve kişisel tercihler birlikte değerlendirilir. Önersene, bu bilgileri aynı deneyimde buluşturarak kullanıcıların kendilerine uygun seçeneklere ulaşmasını kolaylaştırmayı hedefler.
 
 İşletmeler için ise profil, konum, menü ve kampanya bilgilerinin yönetilebildiği bir yapı sunmayı amaçlar.
 
@@ -35,7 +35,7 @@ Bir yer seçerken konum, fiyat, kategori ve kişisel tercihler birlikte değerle
 
 ### Yapay Zekâ Vizyonu
 
-YerBulGo'nun geliştirme hedeflerinden biri, **Yeri** adlı asistan üzerinden doğal dille mekân keşfi sağlamaktır. Kullanıcının ihtiyacını sohbet ederek anlatması ve önerileri harita üzerinde incelemesi hedeflenir.
+Önersene’nin geliştirme hedeflerinden biri, **Yeri** adlı asistan üzerinden doğal dille mekân keşfi sağlamaktır. Kullanıcının ihtiyacını sohbet ederek anlatması ve önerileri harita üzerinde incelemesi hedeflenir.
 
 Örnek kullanım senaryosu:
 
@@ -54,21 +54,6 @@ Sohbet ile haritanın birlikte kullanılması, önerilen işletmenin haritada vu
 | Harita | MapLibre GL JS |
 | Kimlik doğrulama | JWT |
 | Yapay zekâ entegrasyonu | Google Gemini entegrasyon çalışmaları |
-
-## Uygulama Yapısı
-
-Uygulama; web arayüzü, API denetleyicileri, iş kurallarını yürüten servisler ve veri erişimi bileşenleri etrafında düzenlenir.
-
-| Konum | Sorumluluk |
-| --- | --- |
-| `Yerbul.Web/` | Web uygulaması ve uygulama başlangıç yapılandırması |
-| `Yerbul.Web/Controllers/Api/` | API isteklerinin karşılanması |
-| `Yerbul.Web/Services/` | İş mantığı ve dış servis entegrasyonları |
-| `Yerbul.Web/wwwroot/` | Statik arayüz dosyaları |
-| `Yerbul.Web/wwwroot/js/app.js` | Arayüz davranışları ve API etkileşimleri |
-| `database/` | SQL betikleri ve veri tabanı değişikliklerine ilişkin belgeler |
-
-Bu tablo temel bileşenleri gösterir; eksiksiz bir dosya envanteri değildir.
 
 ## Yerel Kurulum
 
@@ -90,20 +75,6 @@ Uygulamanın bağlantı dizesini kendi SQL Server kurulumunuza göre ayarlayın.
 ### 3. Servis Ayarlarını Tamamlayın
 
 Kullanılacak özelliklere göre JWT, harita servisleri ve Gemini ayarlarını yapılandırın. API anahtarlarını, parolaları ve imzalama anahtarlarını kaynak koda eklemeyin; geliştirme ortamında User Secrets veya ortam değişkenlerini tercih edin.
-
-### 4. Uygulamayı Çalıştırın
-
-Aşağıdaki örnek komutlar, terminalin `Yerbul.Web` klasörünü içeren proje kökünde olduğu varsayımıyla verilmiştir:
-
-```bash
-dotnet restore Yerbul.Web
-dotnet build Yerbul.Web
-dotnet run --project Yerbul.Web
-```
-
-Başlatma tamamlandıktan sonra terminalde gösterilen yerel adresi tarayıcıda açın. Port ve HTTPS ayarları kullanılan başlatma profiline bağlıdır.
-
-> Bu komutlar bu README hazırlanırken güncel kaynak kod üzerinde çalıştırılmamıştır. Veri tabanı kurulumu, uygulamayı başlatma komutundan ayrı olarak tamamlanmalıdır.
 
 ## Geliştirme Hedefleri
 
