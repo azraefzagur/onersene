@@ -1,5 +1,17 @@
 # Önersene
 
+## Bu klasördeki sürümü çalıştırma
+
+Bu çalışma ağacında HTML/CSS/JavaScript arayüzü ve örnek verili bir Python sunucusu bulunur. Python 3 kuruluysa proje klasöründe:
+
+```powershell
+py server.py
+```
+
+Ardından `http://127.0.0.1:5050` adresini açın. Portu değiştirmek için PowerShell'de önce `$env:PORT = 5051` yazın. Keşif haritası, kategoriler, arama ve işletme detayları örnek İstanbul verileriyle çalışır. Harita döşemeleri, yazı tipleri ve bazı görseller için internet bağlantısı gerekir.
+
+Bu demo sunucusu kalıcı veri tabanı veya gerçek kimlik doğrulama içermez. Giriş/kayıt, işletme yönetimi, kampanya oluşturma, ziyaret kaydı ve Yeri sohbeti için gereken backend bu klasörde yoktur; bu işlemler demo tarafından başarı olarak taklit edilmez. Aşağıdaki .NET/SQL bölümü ürünün hedef mimarisini anlatır ve mevcut çalışma ağacından tek başına kurulamaz.
+
 ### Sana uygun yeri keşfet.
 
 Önersene, kullanıcıların konumlarına, bütçelerine ve tercihlerine uygun işletmeleri keşfetmelerini amaçlayan harita tabanlı bir web uygulamasıdır. Mekân keşfini, işletme bilgilerini ve kampanyaları tek bir platformda bir araya getirir.
